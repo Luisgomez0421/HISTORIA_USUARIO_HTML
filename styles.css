@@ -1,19 +1,15 @@
 /* ============================================================
    PORTAFOLIO SEMANA 2 — style.css
    Aplica: CSS Flexbox + CSS Grid Layout
-   Autor: Tu Nombre
+   Autor: Luis Gomez
    ============================================================ */
 
-
-/* ============================================================
-   1. VARIABLES Y RESET BASE
-   ============================================================ */
 :root {
   --color-fondo:      #0f0f13;
   --color-superficie: #1a1a24;
   --color-borde:      #2e2e42;
-  --color-acento:     #a78bfa;    /* morado suave */
-  --color-acento2:    #34d399;    /* verde menta */
+  --color-acento:     #a78bfa;    
+  --color-acento2:    #34d399; 
   --color-texto:      #e2e8f0;
   --color-texto-sub:  #94a3b8;
   --fuente-titulo:    'Syne', sans-serif;
@@ -30,7 +26,7 @@
 }
 
 html {
-  scroll-behavior: smooth;  /* Desplazamiento suave al hacer clic en links */
+  scroll-behavior: smooth; 
 }
 
 body {
@@ -50,17 +46,10 @@ ul {
   list-style: none;
 }
 
-
-/* ============================================================
-   2. HEADER CON FLEXBOX — TASK 2
-   Propiedad: display: flex
-   - justify-content: space-between → logo a la izquierda, nav a la derecha
-   - align-items: center            → centra verticalmente logo y enlaces
-   ============================================================ */
 .header {
-  display: flex;                    /* Activa Flexbox */
-  justify-content: space-between;   /* Logo y nav en extremos opuestos */
-  align-items: center;              /* Alineación vertical centrada */
+  display: flex;                 
+  justify-content: space-between;   
+  align-items: center;             
   padding: 1.2rem 5%;
   background-color: rgba(15,15,19,0.9);
   border-bottom: 1px solid var(--color-borde);
@@ -77,15 +66,12 @@ ul {
   color: var(--color-acento);
 }
 
-/* ============================================================
-   NAVEGACIÓN CON FLEXBOX — TASK 2
-   Los enlaces del nav también usan flex para distribuirse
-   ============================================================ */
+
 .nav {
-  display: flex;                  /* Flexbox en la nav */
-  justify-content: center;        /* Centra los links */
-  align-items: center;            /* Alineación vertical */
-  gap: 2rem;                      /* Espacio entre cada link */
+  display: flex;                 
+  justify-content: center;       
+  align-items: center;            
+  gap: 2rem;                    
 }
 
 .nav a {
@@ -101,14 +87,10 @@ ul {
 }
 
 
-/* ============================================================
-   3. HERO SECTION CON FLEXBOX
-   Centra el contenido vertical y horizontalmente
-   ============================================================ */
 .hero {
-  display: flex;                  /* Flexbox para centrar */
-  justify-content: center;        /* Centro horizontal */
-  align-items: center;            /* Centro vertical */
+  display: flex;              
+  justify-content: center;      
+  align-items: center;           
   min-height: 90vh;
   padding: 4rem 5%;
   text-align: center;
@@ -168,3 +150,366 @@ ul {
   box-shadow: 0 8px 24px rgba(167,139,250,0.4);
 }
 
+.section-title {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  background: #1e1b4b;
+  color: var(--color-acento);
+  border: 1px solid var(--color-acento);
+  padding: 0.2rem 0.7rem;
+  border-radius: 99px;
+  font-weight: 400;
+}
+
+.badge-dark {
+  background: #064e3b;
+  color: var(--color-acento2);
+  border-color: var(--color-acento2);
+}
+
+
+
+.sobre-mi {
+  padding: 5rem 5%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sobre-mi-contenido {
+  display: flex;              
+  flex-direction: row;         
+  align-items: center;         
+  gap: 3rem;                   
+  margin-top: 2rem;
+}
+
+.perfil-img {
+  font-size: 7rem;
+  min-width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-superficie);
+  border-radius: 50%;
+  border: 2px solid var(--color-borde);
+}
+
+.perfil-texto h3 {
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.perfil-texto p {
+  color: var(--color-texto-sub);
+  margin-bottom: 1.5rem;
+}
+
+/* Lista de habilidades con FLEXBOX */
+.habilidades {
+  display: flex;       
+  flex-wrap: wrap;    
+  gap: 0.5rem;
+}
+
+.habilidades li {
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  color: var(--color-acento);
+  padding: 0.3rem 0.9rem;
+  border-radius: 99px;
+  font-size: 0.85rem;
+}
+
+.proyectos {
+  padding: 5rem 5%;
+  background-color: var(--color-superficie);
+}
+
+.proyectos > .section-title {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+}
+
+.proyectos-grid {
+  display: grid;                                       
+  grid-template-columns: repeat(3, 1fr);              
+  gap: 1.5rem;                                         
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tarjeta-destacada {
+  grid-column: span 2;         
+  background: linear-gradient(135deg, #1e1b4b, #2e1065);
+  border-color: var(--color-acento);
+}
+
+
+.tarjeta {
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 1.8rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-acento);
+}
+
+.tarjeta-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tarjeta h3 {
+  font-family: var(--fuente-titulo);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta p {
+  color: var(--color-texto-sub);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(167,139,250,0.1);
+  color: var(--color-acento);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 99px;
+  margin-right: 0.3rem;
+}
+
+.contacto {
+  padding: 5rem 5%;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contacto-links {
+  display: flex;             
+  justify-content: center;    
+  gap: 1rem;                  
+  flex-wrap: wrap;            
+  margin-top: 2rem;
+}
+
+.contacto-btn {
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto);
+  padding: 0.7rem 1.5rem;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.contacto-btn:hover {
+  border-color: var(--color-acento);
+  transform: translateY(-2px);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-texto-sub);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--color-borde);
+}
+
+
+.galeria-section {
+  padding: 5rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeria-section-dark {
+  max-width: 100%;
+  background: var(--color-superficie);
+  padding: 5rem 5%;
+}
+
+.galeria-section-dark .proyectos-grid,
+.galeria-section-dark .section-title {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.galeria-desc {
+  color: var(--color-texto-sub);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.galeria-flex {
+  display: flex;              
+  flex-wrap: wrap;             
+  justify-content: flex-start; 
+  gap: 1.2rem;               
+}
+
+.mascota-card {
+  flex: 1 1 180px;             
+  max-width: 220px;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.mascota-card:hover {
+  transform: scale(1.03);
+}
+
+.mascota-img {
+  font-size: 4rem;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mascota-card p {
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  padding: 0.5rem 0.5rem 0;
+}
+
+.mascota-card span {
+  font-size: 0.8rem;
+  color: var(--color-texto-sub);
+  display: block;
+  padding-bottom: 0.8rem;
+}
+
+.galeria-grid {
+  display: grid;                              
+  grid-template-columns: repeat(3, 1fr);       
+  gap: 1.2rem;                                 
+  max-width: 1100px;
+  margin: 2rem auto 0;
+}
+
+.mascota-card-grid {
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.mascota-card-grid:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-acento2);
+}
+
+.mascota-card-grid.grande {
+  grid-column: span 2;     
+  display: flex;                
+  align-items: center;
+}
+
+.mascota-card-grid.grande .mascota-img-grid {
+  min-width: 140px;
+  height: 140px;
+}
+
+.mascota-img-grid {
+  font-size: 3.5rem;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mascota-info {
+  padding: 0.8rem 1rem;
+}
+
+.mascota-info p {
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.mascota-info span {
+  font-size: 0.8rem;
+  color: var(--color-texto-sub);
+}
+
+
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;   
+    gap: 1rem;
+  }
+
+  .proyectos-grid {
+    grid-template-columns: 1fr;   
+  }
+
+  .tarjeta-destacada {
+    grid-column: span 1;
+  }
+
+  .sobre-mi-contenido {
+    flex-direction: column;  
+    text-align: center;
+  }
+
+  .habilidades {
+    justify-content: center;
+  }
+
+  /* Grid de galería: 2 columnas en tablet */
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mascota-card-grid.grande {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mascota-card-grid.grande {
+    grid-column: span 1;
+    flex-direction: column;
+  }
+}
