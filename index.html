@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Portafolio | Semana 2</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+ 
+
+  <header class="header">
+    <div class="logo">👨‍💻 Mi Portafolio</div>
+ 
+    <!-- Navegación distribuida con flexbox -->
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="mascotas.html">Mascotas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">¡Hola mundo! 👋</p>
+      <h1>Soy <span>Tu Nombre</span></h1>
+      <p class="hero-sub">Estudiante de desarrollo web apasionado por crear interfaces bonitas y funcionales.</p>
+      <a href="#proyectos" class="btn">Ver mis proyectos</a>
+    </div>
+  </section>
+ 
+  <section class="sobre-mi" id="sobre-mi">
+    <h2 class="section-title">Sobre mí</h2>
+    <div class="sobre-mi-contenido">
+      <div class="perfil-img">🧑‍🎓</div>
+      <div class="perfil-texto">
+        <h3>¡Bienvenido a mi portafolio!</h3>
+        <p>Estoy aprendiendo HTML, CSS y JavaScript. Me encanta diseñar páginas web y cada día aprendo algo nuevo. Este portafolio muestra mi progreso en el mundo del desarrollo web.</p>
+        <ul class="habilidades">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Flexbox</li>
+          <li>CSS Grid</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="proyectos" id="proyectos">
+    <h2 class="section-title">Mis Proyectos</h2>
+ 
+    <!-- Contenedor principal con grid-area para layout de destaque -->
+    <div class="proyectos-grid">
+ 
+      <!-- Tarjeta destacada (ocupa más espacio con grid-area) -->
+      <div class="tarjeta tarjeta-destacada">
+        <div class="tarjeta-icon">🌐</div>
+        <h3>Portafolio Personal</h3>
+        <p>Mi primer sitio web construido con HTML y CSS. Incluye secciones de presentación, proyectos y contacto.</p>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+      </div>
+ 
+ 
+  <footer class="footer">
+    <p>Hecho con corazon y mucho CSS — Semana 2</p>
+  </footer>
+ 
+</body>
+</html>
+ 

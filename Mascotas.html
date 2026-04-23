@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería de Mascotas | Semana 2</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">👨‍💻 Mi Portafolio</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#sobre-mi">Sobre mí</a>
+      <a href="index.html#proyectos">Proyectos</a>
+      <a href="mascotas.html" class="nav-activo">Mascotas</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero hero-mascotas">
+    <div class="hero-content">
+      <p class="hero-tag">🐾 Mi galería favorita</p>
+      <h1>Galería de <span>Mascotas</span></h1>
+      <p class="hero-sub">Una colección de las mascotas más adorables del mundo.</p>
+    </div>
+  </section>
+
+  <section class="galeria-section">
+    <h2 class="section-title">Con Flexbox <span class="badge">display: flex + flex-wrap</span></h2>
+    <p class="galeria-desc">Las imágenes se distribuyen en filas automáticamente. Si la pantalla es pequeña, bajan solas a la siguiente fila.</p>
+
+    <div class="galeria-flex">
+      <!-- Mínimo 6 imágenes usando emojis + placeholders de color -->
+      <div class="mascota-card">
+        <div class="mascota-img" style="background:#fde68a;">🐶</div>
+        <p>Max</p>
+        <span>Perro • Golden</span>
+      </div>
+      <div class="mascota-card">
+        <div class="mascota-img" style="background:#d9f99d;">🐱</div>
+        <p>Luna</p>
+        <span>Gata • Persa</span>
+      </div>
+      <div class="mascota-card">
+        <div class="mascota-img" style="background:#bfdbfe;">🐹</div>
+        <p>Pepe</p>
+        <span>Hámster</span>
+      </div>
+      <div class="mascota-card">
+        <div class="mascota-img" style="background:#fecaca;">🐰</div>
+        <p>Coco</p>
+        <span>Conejo</span>
+      </div>
+      <div class="mascota-card">
+        <div class="mascota-img" style="background:#e9d5ff;">🦜</div>
+        <p>Pico</p>
+        <span>Loro • Verde</span>
+      </div>
+      <div class="mascota-card">
+        <div class="mascota-img" style="background:#fed7aa;">🐠</div>
+        <p>Nemo</p>
+        <span>Pez • Payaso</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="galeria-section galeria-section-dark">
+    <h2 class="section-title">Con CSS Grid <span class="badge badge-dark">display: grid + grid-template-columns</span></h2>
+    <p class="galeria-desc">Las imágenes se organizan como mosaico. Algunas ocupan más espacio usando grid-column.</p>
+
+    <div class="galeria-grid">
+      <div class="mascota-card-grid grande">
+        <div class="mascota-img-grid" style="background:#fde68a;">🐶</div>
+        <div class="mascota-info">
+          <p>Max — El más grande</p>
+          <span>Perro • Golden Retriever</span>
+        </div>
+      </div>
+
+      <div class="mascota-card-grid">
+        <div class="mascota-img-grid" style="background:#d9f99d;">🐱</div>
+        <div class="mascota-info">
+          <p>Luna</p>
+          <span>Gata Persa</span>
+        </div>
+      </div>
+
+      <div class="mascota-card-grid">
+        <div class="mascota-img-grid" style="background:#bfdbfe;">🐹</div>
+        <div class="mascota-info">
+          <p>Pepe</p>
+          <span>Hámster</span>
+        </div>
+      </div>
+
+      <div class="mascota-card-grid">
+        <div class="mascota-img-grid" style="background:#fecaca;">🐰</div>
+        <div class="mascota-info">
+          <p>Coco</p>
+          <span>Conejo</span>
+        </div>
+      </div>
+
+      <!-- Tarjeta grande: ocupa 2 columnas -->
+      <div class="mascota-card-grid grande">
+        <div class="mascota-img-grid" style="background:#e9d5ff;">🦜</div>
+        <div class="mascota-info">
+          <p>Pico — El favorito</p>
+          <span>Loro Verde</span>
+        </div>
+      </div>
+
+      <div class="mascota-card-grid">
+        <div class="mascota-img-grid" style="background:#fed7aa;">🐠</div>
+        <div class="mascota-info">
+          <p>Nemo</p>
+          <span>Pez Payaso</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p></p>
+  </footer>
+
+</body>
+</html>

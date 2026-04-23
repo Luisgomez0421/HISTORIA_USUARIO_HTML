@@ -1,0 +1,170 @@
+/* ============================================================
+   PORTAFOLIO SEMANA 2 — style.css
+   Aplica: CSS Flexbox + CSS Grid Layout
+   Autor: Tu Nombre
+   ============================================================ */
+
+
+/* ============================================================
+   1. VARIABLES Y RESET BASE
+   ============================================================ */
+:root {
+  --color-fondo:      #0f0f13;
+  --color-superficie: #1a1a24;
+  --color-borde:      #2e2e42;
+  --color-acento:     #a78bfa;    /* morado suave */
+  --color-acento2:    #34d399;    /* verde menta */
+  --color-texto:      #e2e8f0;
+  --color-texto-sub:  #94a3b8;
+  --fuente-titulo:    'Syne', sans-serif;
+  --fuente-cuerpo:    'DM Sans', sans-serif;
+  --radio:            12px;
+  --sombra:           0 4px 24px rgba(0,0,0,0.4);
+}
+
+/* Reset básico */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;  /* Desplazamiento suave al hacer clic en links */
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* ============================================================
+   2. HEADER CON FLEXBOX — TASK 2
+   Propiedad: display: flex
+   - justify-content: space-between → logo a la izquierda, nav a la derecha
+   - align-items: center            → centra verticalmente logo y enlaces
+   ============================================================ */
+.header {
+  display: flex;                    /* Activa Flexbox */
+  justify-content: space-between;   /* Logo y nav en extremos opuestos */
+  align-items: center;              /* Alineación vertical centrada */
+  padding: 1.2rem 5%;
+  background-color: rgba(15,15,19,0.9);
+  border-bottom: 1px solid var(--color-borde);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-acento);
+}
+
+/* ============================================================
+   NAVEGACIÓN CON FLEXBOX — TASK 2
+   Los enlaces del nav también usan flex para distribuirse
+   ============================================================ */
+.nav {
+  display: flex;                  /* Flexbox en la nav */
+  justify-content: center;        /* Centra los links */
+  align-items: center;            /* Alineación vertical */
+  gap: 2rem;                      /* Espacio entre cada link */
+}
+
+.nav a {
+  font-size: 0.9rem;
+  color: var(--color-texto-sub);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav a:hover,
+.nav a.nav-activo {
+  color: var(--color-acento);
+}
+
+
+/* ============================================================
+   3. HERO SECTION CON FLEXBOX
+   Centra el contenido vertical y horizontalmente
+   ============================================================ */
+.hero {
+  display: flex;                  /* Flexbox para centrar */
+  justify-content: center;        /* Centro horizontal */
+  align-items: center;            /* Centro vertical */
+  min-height: 90vh;
+  padding: 4rem 5%;
+  text-align: center;
+  background: radial-gradient(ellipse at center, #1e1b4b 0%, var(--color-fondo) 70%);
+}
+
+.hero-mascotas {
+  min-height: 45vh;
+  background: radial-gradient(ellipse at center, #064e3b 0%, var(--color-fondo) 70%);
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  color: var(--color-acento);
+  padding: 0.3rem 1rem;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero h1 {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero h1 span {
+  color: var(--color-acento);
+}
+
+.hero-sub {
+  color: var(--color-texto-sub);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--color-acento);
+  color: #0f0f13;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border-radius: 99px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(167,139,250,0.4);
+}
+
