@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mi Portafolio</title>
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
 <header class="header">
-  <div class="logo">Mi Portafolio</div>
+  <div class="logo">My Portfolio</div>
 
   <nav class="nav">
-    <a href="index.html">Inicio</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="mascotas.html">Mascotas</a>
-    <a href="#contacto">Contacto</a>
+    <a href="index.html">Home</a>
+    <a href="#about-me">About me</a>
+    <a href="#projects">Projects</a>
+    <a href="pets.html">Pets</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
-  <p id="bienvenida">¡Hola! Soy estudiante de desarrollo web.</p>
+  <p id="welcome">Hello! I am a web development student.</p>
   <h1>Luis David Gómez Díaz</h1>
-  <button class="btn" onclick="cambiarTexto()">Haz clic aquí</button>
+  <button class="btn" onclick="changeText()">Click here</button>
 </section>
 
-<section id="sobre-mi" class="seccion">
-  <h2>Sobre mí</h2>
+<section id="about-me" class="seccion">
+  <h2>About me</h2>
 
   <p>Hello, my name is Luis David Gómez Díaz. I am a technology-oriented student with a strong interest in programming, data analysis, and problem solving.</p>
 
@@ -45,82 +45,82 @@
   </ul>
 </section>
 
-<section id="proyectos" class="seccion">
-  <h2>Proyectos</h2>
+<section id="projects" class="seccion">
+  <h2>Projects</h2>
 
   <div class="proyectos-grid">
 
     <div class="tarjeta">
-      <h3>Análisis de Datos con R</h3>
-      <p>Proyecto de análisis exploratorio de datos utilizando R y RMarkdown para identificar patrones, analizar variables y generar visualizaciones.</p>
+      <h3>Data Analysis with R</h3>
+      <p>Exploratory data analysis project using R and RMarkdown to identify patterns, analyze variables, and generate visualizations.</p>
     </div>
 
     <div class="tarjeta">
-      <h3>Sistema de Gestión de Tareas</h3>
-      <p>Aplicación desarrollada en Python que permite crear, guardar y administrar tareas utilizando almacenamiento en archivos JSON.</p>
+      <h3>Task Management System</h3>
+      <p>Application developed in Python that allows creating, saving, and managing tasks using JSON file storage.</p>
     </div>
 
     <div class="tarjeta">
-      <h3>Simulador de Ping</h3>
-      <p>Programa en Python que simula el comportamiento del comando ping para evaluar la latencia y disponibilidad de un servidor.</p>
+      <h3>Ping Simulator</h3>
+      <p>Python program that simulates the behavior of the ping command to evaluate the latency and availability of a server.</p>
     </div>
 
     <div class="tarjeta">
-      <h3>Sistema de Inventario</h3>
-      <p>Aplicación en Python que permite gestionar inventarios mediante archivos CSV, incluyendo registro, consulta y actualización de productos.</p>
+      <h3>Inventory System</h3>
+      <p>Python application that allows managing inventories through CSV files, including registering, querying, and updating products.</p>
     </div>
 
     <div class="tarjeta">
-      <h3>Portafolio Web</h3>
-      <p>Sitio web personal desarrollado con HTML, CSS y JavaScript para presentar mis proyectos, habilidades y experiencia.</p>
+      <h3>Web Portfolio</h3>
+      <p>Personal website developed with HTML, CSS, and JavaScript to showcase my projects, skills, and experience.</p>
     </div>
 
     <div class="tarjeta">
-      <h3>Exploración de Datos</h3>
-      <p>Análisis exploratorio de bases de datos para identificar valores atípicos, datos faltantes y relaciones entre variables.</p>
+      <h3>Data Exploration</h3>
+      <p>Exploratory analysis of databases to identify outliers, missing data, and relationships between variables.</p>
     </div>
 
   </div>
 </section>
 
-<section id="info-extra" class="seccion">
-  <h2>Información extra</h2>
+<section id="extra-info" class="seccion">
+  <h2>Extra information</h2>
 
-  <div id="contenido-oculto" class="oculto">
-    <p>Además del desarrollo web, también me interesa el análisis de datos y el uso de herramientas como Python y R para resolver problemas del mundo real.</p>
+  <div id="hidden-content" class="oculto">
+    <p>In addition to web development, I am also interested in data analysis and the use of tools such as Python and R to solve real-world problems.</p>
   </div>
 
-  <button class="btn" onclick="mostrarOculto()">Mostrar más</button>
+  <button class="btn" onclick="showHidden()">Show more</button>
 </section>
 
-<section id="contacto" class="seccion">
-  <h2>Contacto</h2>
+<section id="contact" class="seccion">
+  <h2>Contact</h2>
 
-  <p>Si deseas contactarme, puedes enviarme un mensaje usando este formulario.</p>
+  <p>If you would like to contact me, you can send me a message using this form.</p>
 
-  <form id="formulario-contacto">
+  <form id="contact-form">
 
     <input 
       type="text" 
-      id="nombre" 
-      placeholder="Tu nombre"
+      id="name" 
+      placeholder="Your name"
       required
     >
 
     <input 
       type="email" 
       id="email" 
-      placeholder="Tu correo electrónico"
+      placeholder="Your email address"
       required
     >
 
     <textarea 
-      id="mensaje"
-      placeholder="Escribe tu mensaje aquí"
+      id="message"
+      placeholder="Write your message here"
       required
     ></textarea>
 
-    <button type="submit" class="btn">Enviar mensaje</button>
+    <button type="submit" class="btn">Send message</button>
 
   </form>
 

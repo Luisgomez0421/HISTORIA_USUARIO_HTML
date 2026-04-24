@@ -1,51 +1,51 @@
-// Cambia el texto de bienvenida cuando el usuario hace clic en el botón
-function cambiarTexto() {
-  var parrafo = document.getElementById("bienvenida");
-  parrafo.textContent = "Gracias por visitar mi portafolio. Aquí puedes ver algunos de los proyectos que he realizado.";
+// Changes the welcome text when the user clicks the button
+function changeText() {
+  var paragraph = document.getElementById("welcome");
+  paragraph.textContent = "Thank you for visiting my portfolio. Here you can see some of the projects I have worked on.";
 }
 
 
-// Muestra u oculta la información extra
-function mostrarOculto() {
-  var contenido = document.getElementById("contenido-oculto");
-  var boton = event.target;
+// Shows or hides the extra information
+function showHidden() {
+  var content = document.getElementById("hidden-content");
+  var button = event.target;
 
-  if (contenido.style.display === "none" || contenido.style.display === "") {
-    contenido.style.display = "block";
-    boton.textContent = "Ocultar información";
+  if (content.style.display === "none" || content.style.display === "") {
+    content.style.display = "block";
+    button.textContent = "Hide information";
   } else {
-    contenido.style.display = "none";
-    boton.textContent = "Mostrar más";
+    content.style.display = "none";
+    button.textContent = "Show more";
   }
 }
 
 
-// Mensaje de bienvenida cuando se carga la página
+// Welcome message when the page loads
 window.onload = function() {
-  alert("Bienvenido a mi portafolio.");
+  alert("Welcome to my portfolio.");
 };
 
 
-// Formulario de contacto
-document.getElementById("formulario-contacto").addEventListener("submit", function(e){
+// Contact form
+document.getElementById("contact-form").addEventListener("submit", function(e){
 
   e.preventDefault();
 
-  var nombre = document.getElementById("nombre").value;
+  var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
-  var mensaje = document.getElementById("mensaje").value;
+  var message = document.getElementById("message").value;
 
-  var correo = "Luisgomez@idetp.edu.co";
-  var asunto = "Mensaje desde el portafolio";
+  var recipient = "Luisgomez@idetp.edu.co";
+  var subject = "Message from the portfolio";
 
-  var cuerpo =
-    "Nombre: " + nombre +
+  var body =
+    "Name: " + name +
     "\nEmail: " + email +
-    "\n\nMensaje:\n" + mensaje;
+    "\n\nMessage:\n" + message;
 
   window.location.href =
-    "mailto:" + correo +
-    "?subject=" + encodeURIComponent(asunto) +
-    "&body=" + encodeURIComponent(cuerpo);
+    "mailto:" + recipient +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
 
 });
