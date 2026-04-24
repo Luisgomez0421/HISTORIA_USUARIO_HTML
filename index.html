@@ -3,17 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mi Portafolio | Semana 2</title>
+  <title>Mi Portafolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
 <body>
  
-
   <header class="header">
-    <div class="logo">👨‍💻 Mi Portafolio</div>
- 
-    <!-- Navegación distribuida con flexbox -->
+    <div class="logo">Mi Portafolio</div>
     <nav class="nav">
       <a href="index.html">Inicio</a>
       <a href="#sobre-mi">Sobre mí</a>
@@ -22,96 +18,73 @@
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
-
+ 
   <section class="hero">
-    <div class="hero-content">
-      <p class="hero-tag">¡Hola mundo! 👋</p>
-      <h1>Soy <span>Tu Nombre</span></h1>
-      <p class="hero-sub">Estudiante de desarrollo web apasionado por crear interfaces bonitas y funcionales.</p>
-      <a href="#proyectos" class="btn">Ver mis proyectos</a>
-    </div>
+    <p id="bienvenida">¡Hola! Soy estudiante de desarrollo web.</p>
+    <h1>Mi Nombre</h1>
+    <button class="btn" onclick="cambiarTexto()">Haz clic aquí</button>
   </section>
  
-  <section class="sobre-mi" id="sobre-mi">
-    <h2 class="section-title">Sobre mí</h2>
-    <div class="sobre-mi-contenido">
-      <div class="perfil-img">🧑‍🎓</div>
-      <div class="perfil-texto">
-        <h3>¡Bienvenido a mi portafolio!</h3>
-        <p>Estoy aprendiendo HTML, CSS y JavaScript. Me encanta diseñar páginas web y cada día aprendo algo nuevo. Este portafolio muestra mi progreso en el mundo del desarrollo web.</p>
-        <ul class="habilidades">
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>Flexbox</li>
-          <li>CSS Grid</li>
-          <li>JavaScript</li>
-        </ul>
-      </div>
-    </div>
+  <section id="sobre-mi" class="seccion">
+    <h2>Sobre mí</h2>
+    <p>Estoy aprendiendo HTML, CSS y JavaScript. Me gusta crear páginas web.</p>
+    <ul class="habilidades">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
   </section>
  
-  <section class="proyectos" id="proyectos">
-    <h2 class="section-title">Mis Proyectos</h2>
- 
-    <!-- Contenedor principal con grid-area para layout de destaque -->
+  <section id="proyectos" class="seccion">
+    <h2>Proyectos</h2>
     <div class="proyectos-grid">
- 
-      <!-- Tarjeta destacada (ocupa más espacio con grid-area) -->
-      <div class="tarjeta tarjeta-destacada">
-        <div class="tarjeta-icon">🌐</div>
-        <h3>Portafolio Personal</h3>
-        <p>Mi primer sitio web construido con HTML y CSS. Incluye secciones de presentación, proyectos y contacto.</p>
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-      </div>
- 
       <div class="tarjeta">
-        <div class="tarjeta-icon">📋</div>
-        <h3>Lista de Tareas</h3>
-        <p>App para agregar, completar y eliminar tareas del día usando JavaScript.</p>
-        <span class="tag">JavaScript</span>
-        <span class="tag">DOM</span>
+        <h3>Portafolio</h3>
+        <p>Mi primer sitio web con HTML y CSS.</p>
       </div>
- 
       <div class="tarjeta">
-        <div class="tarjeta-icon">🎨</div>
-        <h3>Galería de Colores</h3>
-        <p>Generador de paletas de colores aleatorias con botón de copiar al portapapeles.</p>
-        <span class="tag">CSS</span>
-        <span class="tag">JS</span>
+        <h3>Lista de tareas</h3>
+        <p>App para organizar tareas con JavaScript.</p>
       </div>
- 
       <div class="tarjeta">
-        <div class="tarjeta-icon">🧮</div>
+        <h3>Galería</h3>
+        <p>Galería de imágenes con Flexbox y Grid.</p>
+      </div>
+      <div class="tarjeta">
         <h3>Calculadora</h3>
-        <p>Calculadora básica con operaciones de suma, resta, multiplicación y división.</p>
-        <span class="tag">JavaScript</span>
+        <p>Calculadora básica con operaciones simples.</p>
       </div>
- 
       <div class="tarjeta">
-        <div class="tarjeta-icon">🐾</div>
-        <h3>Galería de Mascotas</h3>
-        <p>Página con galería de imágenes de mascotas organizada con Flexbox y Grid.</p>
-        <span class="tag">Flexbox</span>
-        <span class="tag">Grid</span>
+        <h3>Mascotas</h3>
+        <p>Galería de mascotas con Grid Layout.</p>
       </div>
- 
+      <div class="tarjeta">
+        <h3>Formulario</h3>
+        <p>Formulario de contacto con validación básica.</p>
+      </div>
     </div>
   </section>
  
-  <section class="contacto" id="contacto">
-    <h2 class="section-title">Contacto</h2>
+  <section id="info-extra" class="seccion">
+    <h2>Información extra</h2>
+    <div id="contenido-oculto" class="oculto">
+      <p>¡Encontraste el contenido oculto! JavaScript puede mostrar y esconder cosas.</p>
+    </div>
+    <button class="btn" onclick="mostrarOculto()">Mostrar más info</button>
+  </section>
+ 
+  <section id="contacto" class="seccion">
+    <h2>Contacto</h2>
     <div class="contacto-links">
-      <a href="mailto:tuemail@ejemplo.com" class="contacto-btn">📧 Email</a>
-      <a href="#" class="contacto-btn">💼 LinkedIn</a>
-      <a href="#" class="contacto-btn">🐙 GitHub</a>
+      <a href="mailto:correo@ejemplo.com" class="btn">Email</a>
+      <a href="#" class="btn">GitHub</a>
     </div>
   </section>
  
   <footer class="footer">
-    <p>Hecho con corazon y mucho CSS — Semana 2</p>
+    <p>Hecho por Mi Nombre — 2024</p>
   </footer>
  
+  <script src="script.js"></script>
 </body>
 </html>
- 
