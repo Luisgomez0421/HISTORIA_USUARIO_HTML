@@ -6,89 +6,107 @@
   <title>Mi Portafolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
- 
-  <header class="header">
-    <div class="logo">Mi Portafolio</div>
-    <nav class="nav">
-      <a href="index.html">Inicio</a>
-      <a href="#sobre-mi">Sobre mí</a>z
-      <a href="#proyectos">Proyectos</a>
-      <a href="mascotas.html">Mascotas</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
- 
-  <section class="hero">
-    <p id="bienvenida">¡Hola! Soy estudiante de desarrollo web.</p>
-    <h1>Luis Gomez</h1>
-    <button class="btn" onclick="cambiarTexto()">Haz clic aquí</button>
-  </section>
- 
-  <section id="sobre-mi" class="seccion">
-    <h2>Sobre mí</h2>
-    <p>Hello, my name is Luis David Gómez Díaz. I am a technology-oriented student with a strong interest in programming, data analysis, and problem solving.</p>
 
-<p>I enjoy working with programming languages such as Python and R, where I have developed projects related to data exploration, file management systems, and algorithmic problem solving. Through my academic experience, I have strengthened my analytical thinking and my ability to approach technical challenges in a structured and efficient way.</p>
+<header class="header">
+  <div class="logo">Mi Portafolio</div>
 
-<p>I am passionate about learning new technologies and applying them to solve real-world problems. My goal is to continue developing my skills in software development and data analysis while contributing to innovative and meaningful projects.</p>
-    <ul class="habilidades">
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-  </section>
- 
-  <section id="proyectos" class="seccion">
-    <h2>Proyectos</h2>
-    <div class="proyectos-grid">
-      <div class="tarjeta">
-        <h3>Portafolio</h3>
-        <p>Mi primer sitio web con HTML y CSS.</p>
-      </div>
-      <div class="tarjeta">
-        <h3>Lista de tareas</h3>
-        <p>App para organizar tareas con JavaScript.</p>
-      </div>
-      <div class="tarjeta">
-        <h3>Galería</h3>
-        <p>Galería de imágenes con Flexbox y Grid.</p>
-      </div>
-      <div class="tarjeta">
-        <h3>Calculadora</h3>
-        <p>Calculadora básica con operaciones simples.</p>
-      </div>
-      <div class="tarjeta">
-        <h3>Mascotas</h3>
-        <p>Galería de mascotas con Grid Layout.</p>
-      </div>
-      <div class="tarjeta">
-        <h3>Formulario</h3>
-        <p>Formulario de contacto con validación básica.</p>
-      </div>
+  <nav class="nav">
+    <a href="index.html">Inicio</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="mascotas.html">Mascotas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <p id="bienvenida">¡Hola! Soy estudiante de desarrollo web.</p>
+  <h1>Luis David Gómez Díaz</h1>
+  <button class="btn" onclick="cambiarTexto()">Haz clic aquí</button>
+</section>
+
+<section id="sobre-mi" class="seccion">
+  <h2>Sobre mí</h2>
+
+  <p>Hello, my name is Luis David Gómez Díaz. I am a technology-oriented student with a strong interest in programming, data analysis, and problem solving.</p>
+
+  <p>I enjoy working with programming languages such as Python and R, where I have developed projects related to data exploration, file management systems, and algorithmic problem solving. Through my academic experience, I have strengthened my analytical thinking and my ability to approach technical challenges in a structured and efficient way.</p>
+
+  <p>I am passionate about learning new technologies and applying them to solve real-world problems. My goal is to continue developing my skills in software development and data analysis while contributing to innovative and meaningful projects.</p>
+
+  <ul class="habilidades">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Python</li>
+    <li>R</li>
+  </ul>
+</section>
+
+<section id="proyectos" class="seccion">
+  <h2>Proyectos</h2>
+
+  <div class="proyectos-grid">
+
+    <div class="tarjeta">
+      <h3>Análisis de Datos con R</h3>
+      <p>Proyecto de análisis exploratorio de datos utilizando R y RMarkdown para identificar patrones, analizar variables y generar visualizaciones.</p>
     </div>
-  </section>
- 
-  <section id="info-extra" class="seccion">
-    <h2>Información extra</h2>
-    <div id="contenido-oculto" class="oculto">
-      <p>¡Encontraste el contenido oculto! JavaScript puede mostrar y esconder cosas.</p>
+
+    <div class="tarjeta">
+      <h3>Sistema de Gestión de Tareas</h3>
+      <p>Aplicación desarrollada en Python que permite crear, guardar y administrar tareas utilizando almacenamiento en archivos JSON.</p>
     </div>
-    <button class="btn" onclick="mostrarOculto()">Mostrar más info</button>
-  </section>
- 
-  <section id="contacto" class="seccion">
-    <h2>Contacto</h2>
-    <div class="contacto-links">
-      <a href="Luisgomez@idetp.edu.co" class="btn">Email</a>
-      <a href="#" class="btn">GitHub</a>
+
+    <div class="tarjeta">
+      <h3>Simulador de Ping</h3>
+      <p>Programa en Python que simula el comportamiento del comando ping para evaluar la latencia y disponibilidad de un servidor.</p>
     </div>
-  </section>
- 
-  <footer class="footer">
-    <p>Luis Gomez— 2026</p>
-  </footer>
- 
-  <script src="script.js"></script>
+
+    <div class="tarjeta">
+      <h3>Sistema de Inventario</h3>
+      <p>Aplicación en Python que permite gestionar inventarios mediante archivos CSV, incluyendo registro, consulta y actualización de productos.</p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Portafolio Web</h3>
+      <p>Sitio web personal desarrollado con HTML, CSS y JavaScript para presentar mis proyectos, habilidades y experiencia.</p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Exploración de Datos</h3>
+      <p>Análisis exploratorio de bases de datos para identificar valores atípicos, datos faltantes y relaciones entre variables.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="info-extra" class="seccion">
+  <h2>Información extra</h2>
+
+  <div id="contenido-oculto" class="oculto">
+    <p>Además del desarrollo web, también me interesa el análisis de datos y el uso de herramientas como Python y R para resolver problemas del mundo real.</p>
+  </div>
+
+  <button class="btn" onclick="mostrarOculto()">Mostrar más</button>
+</section>
+
+<section id="contacto" class="seccion">
+  <h2>Contacto</h2>
+
+  <div class="contacto-links">
+    <a href="mailto:Luisgomez@idetp.edu.co" class="btn">Email</a>
+    <a href="#" class="btn">GitHub</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© Luis David Gómez Díaz — 2026</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
