@@ -96,10 +96,34 @@
 <section id="contacto" class="seccion">
   <h2>Contacto</h2>
 
-  <div class="contacto-links">
-    <a href="mailto:Luisgomez@idetp.edu.co" class="btn">Email</a>
-    <a href="#" class="btn">GitHub</a>
-  </div>
+  <p>Si deseas contactarme, puedes enviarme un mensaje usando este formulario.</p>
+
+  <form id="formulario-contacto">
+
+    <input 
+      type="text" 
+      id="nombre" 
+      placeholder="Tu nombre"
+      required
+    >
+
+    <input 
+      type="email" 
+      id="email" 
+      placeholder="Tu correo electrónico"
+      required
+    >
+
+    <textarea 
+      id="mensaje"
+      placeholder="Escribe tu mensaje aquí"
+      required
+    ></textarea>
+
+    <button type="submit" class="btn">Enviar mensaje</button>
+
+  </form>
+
 </section>
 
 <footer class="footer">
